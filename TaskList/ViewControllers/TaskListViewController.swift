@@ -72,12 +72,14 @@ class TaskListViewController: UITableViewController {
     }
     
     private func showAlert(withTitle title: String, andMessage message: String, oldTask: String? = nil, completion: @escaping (String) -> Void) {
+        
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { _ in
             guard let task = alert.textFields?.first?.text, !task.isEmpty else { return }
             completion(task)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
+        
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         alert.addTextField { textField in

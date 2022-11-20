@@ -24,7 +24,6 @@ class StorageManager {
 
     private init() {}
     
-    
     func saveContext() {
         let context = persistentContainer.viewContext
         if context.hasChanges {
