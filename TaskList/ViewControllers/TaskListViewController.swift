@@ -49,16 +49,20 @@ class TaskListViewController: UITableViewController {
             withTitle: "New Task",
             andMessage: "What do you want to do?",
             completion: { [unowned self] taskName in
-                let task = Task(context: viewContext)
-                task.title = taskName
-                taskList.append(task)
-                
-                let cellIndex = IndexPath(row: taskList.count - 1, section: 0)
-                tableView.insertRows(at: [cellIndex], with: .automatic)
-                
-                StorageManager.share.saveContext()
+                save(taskName)
             }
         )
+    }
+    
+    private func save(_ taskName: String) {
+        let task = Task(context: viewContext)
+        task.title = taskName
+        taskList.append(task)
+        
+        let cellIndex = IndexPath(row: taskList.count - 1, section: 0)
+        tableView.insertRows(at: [cellIndex], with: .automatic)
+        
+        StorageManager.share.saveContext()
     }
     
     private func fetchData() {
