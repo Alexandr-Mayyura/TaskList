@@ -36,4 +36,15 @@ class StorageManager {
             }
         }
     }
+    
+    func fetchData(completion: ([Task]) -> Void) {
+        let fetchRequest = Task.fetchRequest()
+        
+        do {
+            let task = try persistentContainer.viewContext.fetch(fetchRequest)
+            completion(task)
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }

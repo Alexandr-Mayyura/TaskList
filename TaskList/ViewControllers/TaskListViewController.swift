@@ -62,12 +62,8 @@ class TaskListViewController: UITableViewController {
     }
     
     private func fetchData() {
-        let fetchRequest = Task.fetchRequest()
-        
-        do {
-            taskList = try viewContext.fetch(fetchRequest)
-        } catch let error {
-            print(error.localizedDescription)
+        StorageManager.share.fetchData { tasks in
+            taskList = tasks
         }
     }
     
