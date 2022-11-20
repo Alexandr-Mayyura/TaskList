@@ -12,9 +12,9 @@ import CoreData
 class StorageManager {
     static let share = StorageManager()
     
-    var persistentContainer: NSPersistentContainer = {
+    let persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "TaskList")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+        container.loadPersistentStores(completionHandler: { (_, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
