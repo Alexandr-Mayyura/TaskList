@@ -39,6 +39,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FCCDB53292A8997006EF87C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A8580EE12926A14400480465 /* TaskListViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1FCCDB54292A89AA006EF87C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A8580EEB2926A14500480465 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		1FCCDB55292A89CE006EF87C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A8580EDD2926A14400480465 /* AppDelegate.swift */,
+				A8580EDF2926A14400480465 /* SceneDelegate.swift */,
+				A8580EEE2926A14500480465 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1FCCDB56292A8A1C006EF87C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8580EE62926A14400480465 /* TaskList.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1FCCDB57292A8A3A006EF87C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1FCCDB51292A7E2A006EF87C /* StorageManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		A8580ED12926A14400480465 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +100,12 @@
 		A8580EDC2926A14400480465 /* TaskList */ = {
 			isa = PBXGroup;
 			children = (
-				A8580EDD2926A14400480465 /* AppDelegate.swift */,
-				A8580EDF2926A14400480465 /* SceneDelegate.swift */,
-				A8580EE12926A14400480465 /* TaskListViewController.swift */,
-				1FCCDB51292A7E2A006EF87C /* StorageManager.swift */,
+				1FCCDB55292A89CE006EF87C /* App */,
+				1FCCDB54292A89AA006EF87C /* Storyboards */,
+				1FCCDB53292A8997006EF87C /* ViewControllers */,
+				1FCCDB57292A8A3A006EF87C /* Services */,
+				1FCCDB56292A8A1C006EF87C /* Models */,
 				A8580EE92926A14500480465 /* Assets.xcassets */,
-				A8580EEB2926A14500480465 /* LaunchScreen.storyboard */,
-				A8580EEE2926A14500480465 /* Info.plist */,
-				A8580EE62926A14400480465 /* TaskList.xcdatamodeld */,
 			);
 			path = TaskList;
 			sourceTree = "<group>";
@@ -285,7 +325,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22NTM9AJGF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskList/Info.plist;
+				INFOPLIST_FILE = TaskList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
@@ -317,7 +357,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 22NTM9AJGF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TaskList/Info.plist;
+				INFOPLIST_FILE = TaskList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;

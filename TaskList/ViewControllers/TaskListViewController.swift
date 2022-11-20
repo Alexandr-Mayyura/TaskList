@@ -45,7 +45,20 @@ class TaskListViewController: UITableViewController {
     }
     
     @objc private func addNewTask() {
-        showAlert(withTitle: "New Task", andMessage: "What do you want to do?", completion: save(_:))
+        showAlert(
+            withTitle: "New Task",
+            andMessage: "What do you want to do?",
+            completion: { [unowned self] taskName in
+                let task = Task(context: viewContext)
+                task.title = taskName
+                taskList.append(task)
+                
+                let cellIndex = IndexPath(row: taskList.count - 1, section: 0)
+                tableView.insertRows(at: [cellIndex], with: .automatic)
+                
+                StorageManager.share.saveContext()
+            }
+        )
     }
     
     private func fetchData() {
@@ -73,17 +86,6 @@ class TaskListViewController: UITableViewController {
         }
         present(alert, animated: true)
     }
-    
-    private func save(_ taskName: String) {
-        let task = Task(context: viewContext)
-        task.title = taskName
-        taskList.append(task)
-        
-        let cellIndex = IndexPath(row: taskList.count - 1, section: 0)
-        tableView.insertRows(at: [cellIndex], with: .automatic)
-        
-        StorageManager.share.saveContext()
-    }
 }
 
 // MARK: - UITableView Data Source
@@ -108,14 +110,14 @@ extension TaskListViewController {
         let task = taskList[indexPath.row].title
         
         showAlert(
-            withTitle: "Edit",
-            andMessage: "Edit",
+            withTitle: "Update Task",
+            andMessage: "What do you want to do?",
             oldTask: task,
             completion: { [unowned self] taskName in
-            taskList[indexPath.row].title = taskName
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-            StorageManager.share.saveContext()
-        }
+                taskList[indexPath.row].title = taskName
+                tableView.reloadRows(at: [indexPath], with: .automatic)
+                StorageManager.share.saveContext()
+            }
         )
         
         tableView.deselectRow(at: indexPath, animated: true)
