@@ -37,7 +37,7 @@ class StorageManager {
         }
     }
     
-    func fetchData(completion: ([Task]) -> Void) {
+    func fetchData(_ completion: ([Task]) -> Void) {
         let fetchRequest = Task.fetchRequest()
         
         do {
