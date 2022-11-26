@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F3AF9792932B95300CCA669 /* AlertContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AF9782932B95300CCA669 /* AlertContoller.swift */; };
 		1FCCDB52292A7E2A006EF87C /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FCCDB51292A7E2A006EF87C /* StorageManager.swift */; };
 		A8580EDE2926A14400480465 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8580EDD2926A14400480465 /* AppDelegate.swift */; };
 		A8580EE02926A14400480465 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8580EDF2926A14400480465 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F3AF9782932B95300CCA669 /* AlertContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContoller.swift; sourceTree = "<group>"; };
 		1FCCDB51292A7E2A006EF87C /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		A8580EDA2926A14400480465 /* TaskList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8580EDD2926A14400480465 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				A8580EE12926A14400480465 /* TaskListViewController.swift */,
+				1F3AF9782932B95300CCA669 /* AlertContoller.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				A8580EE82926A14400480465 /* TaskList.xcdatamodeld in Sources */,
 				A8580EE22926A14400480465 /* TaskListViewController.swift in Sources */,
 				1FCCDB52292A7E2A006EF87C /* StorageManager.swift in Sources */,
+				1F3AF9792932B95300CCA669 /* AlertContoller.swift in Sources */,
 				A8580EDE2926A14400480465 /* AppDelegate.swift in Sources */,
 				A8580EE02926A14400480465 /* SceneDelegate.swift in Sources */,
 			);
